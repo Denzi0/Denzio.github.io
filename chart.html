@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Covid Chart</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="chart-container">
+        <canvas id="covidChart"></canvas>
+      </div>
+      <a href="covid.html" class="btn">Go back</a>
+    </div>
+
+    <script>
+      let covidChart = document.getElementById('covidChart').getContext('2d')
+      let barChart = new Chart(covidChart, {
+        type: 'bar', // Change this if necessary
+        data: {
+          labels: [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
+          ], // Change this
+          datasets: [
+            {
+              label: 'Covid Cases', //Change This
+              data: [10, 20, 30, 40, 50, 11, 17],
+              backgroundColor: '#00adb5', // Change this
+            },
+          ],
+        },
+        options: {},
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Ayuda Chart</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="chart-container">
+        <canvas id="ayudaChart"></canvas>
+        <a href="index.html" class="btn">Go back</a>
+      </div>
+    </div>
+    <script>
+      let ayudaChart = document.getElementById('ayudaChart').getContext('2d')
+      let barChart = new Chart(ayudaChart, {
+        type: 'bar', // Change this if necessary
+        data: {
+          labels: [
+            'Brgy Lapasan',
+            'Brgy Nazareth',
+            'Brgy Bayabas',
+            'Brgy Lapasan',
+            'Brgy Moon',
+            'Brgy Mars',
+            'Brgy Pluto',
+          ], // Change this
+          datasets: [
+            {
+              label: 'Covid Cases', //Change This
+              data: [1220, 2300, 3000, 4034, 4330, 2341, 3532],
+              backgroundColor: '#00adb5', // Change this
+            },
+          ],
+        },
+        options: {},
+      })
+    </script>
+  </body>
+</html>
